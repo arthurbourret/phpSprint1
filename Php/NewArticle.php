@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $titre = $_POST['titre'];
 if (!empty($titre)){
     echo $titre;
