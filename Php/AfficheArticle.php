@@ -16,14 +16,5 @@ function getDatafromDB()
 
     $sql = 'SELECT * FROM Article';
 
-    foreach ($db->query($sql) as $row) {
-        $titre = $row["titre"];
-        $theme = $row["theme"];
-
-        echo
-        "<div class=\"container\">
-            <div class=\"item thematique\"> " . $titre . "</div>
-            <div class=\"item article title\">" . $theme . "</div>
-        </div>";
-    }
+    return $db -> query($sql);
 }
