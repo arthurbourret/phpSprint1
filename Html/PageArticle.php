@@ -9,13 +9,13 @@
 <body>
 <div class="container">
 
-    <div class="item meta">
-        <p>Meta</p>
-    </div>
-    <div class="item thematique">Thématique</div>
-    <div class="item nav">Nav</div>
-    <div class="item article content">Text</div>
-    <div class="item article title">Title</div>
+    <?php
+
+        require_once "../Php/Article.php";
+        $article = new Article(1);
+        $article->showArticle();
+
+    ?>
 
 </div>
 </body>

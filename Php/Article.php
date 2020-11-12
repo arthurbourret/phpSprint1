@@ -3,17 +3,22 @@
 class Article
 {
     private $ref;
+    private $db;
 
     function __construct($ref)
     {
-        $this -> ref = $ref;
+        $this->ref = $ref;
+        $this->setDataBase($ref);
     }
 
-    function getArticle() {
+    function setDataBase($ref)
+    {
         include_once('DB.inc.php');
-        $db = null;
+
+        $this->db = null;
+
         try {
-            $db = new PDO(
+            $this->db = new PDO(
                 "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
                 DB_USER,
                 DB_PASS
@@ -21,14 +26,55 @@ class Article
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
+    }
 
-        $sql = 'SELECT * FROM Article WHERE ref_Article = :this->ref';
+    function getArticle()
+    {
+        $ref_article = $this->ref;
+        return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref_article');
+    }
 
-        foreach ($db->query($sql) as $row) {
+    function getAuthor($article)
+    {
+        $ref_user = $article['ref_User'];
+        return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref_user');
+    }
+
+    function getOneRequest($sql)
+    {
+        if ($this->db != null && $sql != '') {
+            echo $sql . '<br/>';
+            $request = $this->db->query(sql);
+
+            if ($request != null)
+                foreach ($request as $row) {
+                    echo $row . '<br/>';
+                }
             return $row;
         }
 
         return null;
+    }
+
+    function showArticle()
+    {
+        $article = $this->getArticle();
+
+        $theme = $article['theme'];
+        $titre = $article['titre'];
+        $body = $article['text'];
+        $vues = $article['nb_vues'];
+
+        $author = $this->getAuthor($article)['login'];
+
+        echo "
+        <div class='item meta'>
+            <p>Auteur $author</p>
+            <p>Vues : $vues</p>
+        </div>
+        <div class='item thematique'>$theme</div>
+        <div class='item article content'>$body</div>
+        <div class='item article title'>$titre</div>";
     }
 
 }

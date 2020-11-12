@@ -1,12 +1,15 @@
 <?php
-session_start();
-echo $_POST["login"] . ' ' . $_POST["password"] . '<br/>';
 
 include_once("Utilisateur.php");
 $use = new Utilisateur();
 
-if ($use->getAuth($_POST["login"], $_POST["password"])) {
+
+$log = $_POST["login"];
+$pass = $_POST["password"];
+
+if ($use->getAuth($log, $pass)) {
     echo("test ok");
+    session_start();
 } else {
     echo("test ko");
 }
