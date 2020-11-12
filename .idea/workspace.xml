@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="514b64f4-6be3-4168-ac43-d470b040d629" name="Default Changelist" comment="" />
+    <list default="true" id="514b64f4-6be3-4168-ac43-d470b040d629" name="Default Changelist" comment="u">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Php/ConnexCompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/Php/ConnexCompte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Php/NewArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/Php/NewArticle.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,8 +53,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605203402004</updated>
-      <workItem from="1605203403080" duration="683000" />
+      <workItem from="1605203403080" duration="1620000" />
     </task>
+    <task id="LOCAL-00001" summary="u">
+      <created>1605205340354</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605205340354</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -67,10 +79,30 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="u" />
+    <option name="LAST_COMMIT_MESSAGE" value="u" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605205223087">
+    <state x="552" y="183" key="#Deployment" timestamp="1605205651550">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1600.870@0.0.1920.1050" timestamp="1605205223087" />
+    <state x="552" y="183" key="#Deployment/0.0.1920.1050/1920.0.1600.870@0.0.1920.1050" timestamp="1605205651550" />
+    <state x="536" y="170" key="#SSH_Configurations" timestamp="1605205506984">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="536" y="170" key="#SSH_Configurations/0.0.1920.1050/1920.0.1600.870@0.0.1920.1050" timestamp="1605205506984" />
+    <state x="598" y="286" key="MultipleFileMergeDialog" timestamp="1605205354997">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050/1920.0.1600.870@0.0.1920.1050" timestamp="1605205354997" />
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605205345872">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1600.870@0.0.1920.1050" timestamp="1605205345872" />
+    <state x="845" y="255" key="ftp.server.browser" timestamp="1605205611175">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="845" y="255" key="ftp.server.browser/0.0.1920.1050/1920.0.1600.870@0.0.1920.1050" timestamp="1605205611175" />
   </component>
 </project>

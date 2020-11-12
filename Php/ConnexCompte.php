@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 echo $_POST["login"] . ' ' . $_POST["password"] . '<br/>';
 
 include_once("Utilisateur.php");
