@@ -19,7 +19,7 @@ $request = getDatafromDB();
 <header>
     <img class="logo" src="../img/icon.png" alt="icon">
     <div class="menu">
-        <a href="Accueil.php">Accueil</a>
+        <a href="Accueil.html">Accueil</a>
         <a href="ConnexionCompte.html">Connexion</a>
         <a href="NewArticle.html">Nouvel article</a>
     </div>
