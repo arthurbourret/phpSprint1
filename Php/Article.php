@@ -8,10 +8,10 @@ class Article
     function __construct($ref)
     {
         $this->ref = $ref;
-        $this->setDataBase($ref);
+        $this->setDataBase();
     }
 
-    function setDataBase($ref)
+    function setDataBase()
     {
         include_once('DB.inc.php');
 
@@ -44,13 +44,13 @@ class Article
     {
         if ($this->db != null && $sql != '') {
             echo $sql . '<br/>';
-            $request = $this->db->query(sql);
+            $request = $this->db->query($sql);
 
             if ($request != null)
                 foreach ($request as $row) {
                     echo $row . '<br/>';
+                    return $row;
                 }
-            return $row;
         }
 
         return null;
