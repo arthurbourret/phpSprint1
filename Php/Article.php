@@ -2,13 +2,13 @@
 
 class Article
 {
-    private $ref;
     private $db;
+    private $ref;
+    private static $ref_article;
 
-    function __construct()
+    function setRef($ref)
     {
-        //$this->ref = $ref;
-        $this->setDataBase();
+        $this->ref = $ref;
     }
 
     function setDataBase()
@@ -23,6 +23,7 @@ class Article
                 DB_USER,
                 DB_PASS
             );
+
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -30,8 +31,7 @@ class Article
 
     function getArticle()
     {
-        $ref_article = $this->ref;
-        return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref_article');
+        return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref');
     }
 
     function getAuthor($article)
@@ -42,15 +42,11 @@ class Article
 
     function getOneRequest($sql)
     {
-        if ($this->db != null && $sql != '') {
-            echo $sql . '<br/>';
-            $request = $this->db->query($sql);
-
-            if ($request != null)
-                foreach ($request as $row) {
-                    echo $row . '<br/>';
-                    return $row;
-                }
+        $sth = $this->db->prepare($sql);
+        $sth->execute(array(':ref' => $this->ref));
+        $refs = $sth->fetchAll();
+        foreach ($refs as $row) {
+            return $row;
         }
 
         return null;
@@ -63,16 +59,14 @@ class Article
         $theme = $article['theme'];
         $titre = $article['titre'];
         $body = $article['text'];
-        $vues = $article['nb_vues'];
 
-        $author = $this->getAuthor($article)['login'];
+        //$author = $this->getAuthor($article)['login'];
 
         echo "
         <div class='item meta'>
-            <p>Auteur $author</p>
-            <p>Vues : $vues</p>
+            <p>Auteur </p>
         </div>
-        <div class='item thematique'>$theme</div>
+        <div class='item thematique'>Thématique : $theme</div>
         <div class='item article content'>$body</div>
         <div class='item article title'>$titre</div>";
     }

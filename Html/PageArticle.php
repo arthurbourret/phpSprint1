@@ -12,7 +12,9 @@
     <?php
 
         require_once "../Php/Article.php";
-        $article = new Article(1);
+        $article = new Article();
+        $article->setRef(1);
+        $article->setDataBase();
         $article->showArticle();
 
     ?>
