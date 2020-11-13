@@ -77,7 +77,7 @@ class Article
         <div class='item article title'>$titre</div>";
     }
 
-    function creatArticle($titre,$theme,$resume,$text){
+    function creatArticle($titre,$theme,$resume,$corps,$refUser){
 
         include_once('DB.inc.php');
 
@@ -90,9 +90,10 @@ class Article
         $titre = filter_var ($titre, FILTER_SANITIZE_STRING);
         $theme = filter_var ($theme, FILTER_SANITIZE_STRING);
         $resume = filter_var ($resume, FILTER_SANITIZE_STRING);
-        $text = filter_var ($text, FILTER_SANITIZE_STRING);
+        $text = filter_var ($corps, FILTER_SANITIZE_STRING);
+        $refUser = filter_var ($refUser, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO Article (`titre`, `theme`, `resume`, `text`) VALUES ('$titre', '$theme', '$resume', '$text')";
+        $sql = "INSERT INTO Article (`titre`, `theme`, `date_Publi`, `resume`, `text`, `ref_User`) VALUES ('$titre', '$theme', 2000-05-11, '$resume', '$text', '$refUser')";
 
         if ($db->exec ($sql)) {
             return true;

@@ -114,4 +114,19 @@ class Utilisateur
             return false;
         }
     }
+
+    public function getUserRef($login){
+
+        include_once('DB.inc.php');
+
+        $db = new PDO(
+            "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+            DB_USER,
+            DB_PASS
+        );
+
+        $sql = "SELECT ref_User FROM SITE_User WHERE login = '$login'";
+
+        return $db->exec($sql);
+    }
 }
