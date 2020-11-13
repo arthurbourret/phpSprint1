@@ -24,22 +24,35 @@ $request = getDatafromDB();
         <a href="NewArticle.html">Nouvel article</a>
     </div>
 
+
+
     <?php
+    session_start();
 
-    foreach ($request as $row) {
-        $ref = $row["ref_Article"];
-        $titre = $row["titre"];
-        $theme = $row["theme"];
-
-        echo
-        "<div class='container' >
-             <div class='item thematique'>'$titre'</div>
-             <div class='item article title'>'$theme'</div>
-        </div>";
+    if(isset($_SESSION['login'])){
+        $log = $_SESSION['login'];
+        $pass = $_SESSION['pwd'];
+        echo $log.$pass;
     }
 
     ?>
 </header>
+
+<?php
+
+foreach ($request as $row) {
+    $ref = $row["ref_Article"];
+    $titre = $row["titre"];
+    $theme = $row["theme"];
+
+    echo
+    "<div class='container' >
+             <div class='item thematique'>'$titre'</div>
+             <div class='item article title'>'$theme'</div>
+        </div>";
+}
+
+?>
 
 <footer>
     <div class="copyright">©2020</div>

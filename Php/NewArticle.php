@@ -1,21 +1,17 @@
 <?php
 session_start();
+include_once("Article.php");
+$art = new Article();
+
 $titre = $_POST['titre'];
-if (!empty($titre)){
-    echo $titre;
-}
-
 $theme = $_POST['thematique'];
-if (!empty($theme)){
-    echo $theme;
-}
-
 $resume = $_POST['resume'];
-if (!empty($resume)){
-    echo $resume;
-}
-
 $corps = $_POST['corps_arcticle'];
-if (!empty($corps)){
-    echo $corps;
+if (!empty($titre) && !empty($theme) && !empty($resume) && !empty($corps)){
+    if ($art->creatArticle($titre,$theme,$resume,$corps)){
+        header('Location: ../Html/Accueil.php');
+    } else {
+        echo("test ko");
+    }
+
 }

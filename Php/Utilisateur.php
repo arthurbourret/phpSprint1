@@ -52,8 +52,6 @@ class Utilisateur
      *
      * @param string $login le login à insérer.
      * @param string $password le mot de passe à insérer.
-     * @param string $mail le mail à insérer.
-     * @param string $tel le tel à insérer.
      *
      * @return boolean selon que l'insertion est ok ou pas.
      */
@@ -70,9 +68,13 @@ class Utilisateur
         $login = filter_var ($login, FILTER_SANITIZE_STRING);
         $pass = filter_var ($password, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO SITE_User (`login`, `pass`) VALUES ($login, $pass)";
+        $sql = "INSERT INTO SITE_User (`login`, `pass`) VALUES ('$login', '$pass')";
 
-        return $db->exec ($sql);
+        if ($db->exec ($sql)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -85,7 +87,7 @@ class Utilisateur
      *
      * @return boolean selon que la mise à jour est ok ou pas.
      */
-    public function updateUser($password, $mail, $tel) {
+    public function updateUser($password) {
 
         include_once('DB.inc.php');
 
@@ -101,16 +103,6 @@ class Utilisateur
         if (!is_null($password)) {
             $pass = filter_var ($password, FILTER_SANITIZE_STRING);
             $maj .= $virgule."pass='$pass'";
-            $virgule = ", ";
-        }
-        if (!is_null($mail)) {
-            $mail = filter_var ($mail, FILTER_SANITIZE_STRING);
-            $maj .= $virgule."mail='$mail'";
-            $virgule = ", ";
-        }
-        if (!is_null($tel)) {
-            $tel = filter_var ($tel, FILTER_SANITIZE_STRING);
-            $maj .= $virgule."tel='$tel'";
             $virgule = ", ";
         }
 

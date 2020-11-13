@@ -3,6 +3,7 @@
     width:50vw;
     height:40vw;
     grid-gap: 8px;
+    margin-top: 5000px;
     margin-bottom: 50px;
     grid-template-columns: 25% 75%;
     grid-template-rows: 10% 20% auto;
