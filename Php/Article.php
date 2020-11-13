@@ -2,12 +2,12 @@
 
 class Article
 {
-    private $ref;
     private $db;
+    private $ref;
 
-    function __construct()
+    function __construct($ref)
     {
-        //$this->ref = $ref;
+        $this->ref = $ref;
         $this->setDataBase();
     }
 
@@ -23,6 +23,16 @@ class Article
                 DB_USER,
                 DB_PASS
             );
+
+
+            $sql = 'SELECT * FROM Article WHERE ref_Article = :ref';
+            $sth = $this->db->prepare($sql);
+            $sth->execute(array(':ref' => $this->ref));
+            $refs = $sth->fetchAll();
+            foreach ($refs as $row) {
+                echo $row['titre'];
+            }
+
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -30,18 +40,25 @@ class Article
 
     function getArticle()
     {
-        $ref_article = $this->ref;
-        return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref_article');
+        return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref');
     }
 
     function getAuthor($article)
     {
-        $ref_user = $article['ref_User'];
-        return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref_user');
+        $this->ref = $article['ref_User'];
+        return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref');
     }
 
     function getOneRequest($sql)
     {
+        $sth = $this->db->prepare($sql);
+        $sth->execute(array(':ref' => $this->ref));
+        $refs = $sth->fetchAll();
+        foreach ($refs as $row) {
+            return $row;
+        }
+
+        /*
         if ($this->db != null && $sql != '') {
             echo $sql . '<br/>';
             $request = $this->db->query($sql);
@@ -52,6 +69,7 @@ class Article
                     return $row;
                 }
         }
+        */
 
         return null;
     }
@@ -65,11 +83,11 @@ class Article
         $body = $article['text'];
         $vues = $article['nb_vues'];
 
-        $author = $this->getAuthor($article)['login'];
+        //$author = $this->getAuthor($article)['login'];
 
         echo "
         <div class='item meta'>
-            <p>Auteur $author</p>
+            <p>Auteur moi</p>
             <p>Vues : $vues</p>
         </div>
         <div class='item thematique'>$theme</div>
@@ -77,7 +95,8 @@ class Article
         <div class='item article title'>$titre</div>";
     }
 
-    function creatArticle($titre,$theme,$resume,$text){
+    function creatArticle($titre, $theme, $resume, $text)
+    {
 
         include_once('DB.inc.php');
 
@@ -87,14 +106,14 @@ class Article
             DB_PASS
         );
 
-        $titre = filter_var ($titre, FILTER_SANITIZE_STRING);
-        $theme = filter_var ($theme, FILTER_SANITIZE_STRING);
-        $resume = filter_var ($resume, FILTER_SANITIZE_STRING);
-        $text = filter_var ($text, FILTER_SANITIZE_STRING);
+        $titre = filter_var($titre, FILTER_SANITIZE_STRING);
+        $theme = filter_var($theme, FILTER_SANITIZE_STRING);
+        $resume = filter_var($resume, FILTER_SANITIZE_STRING);
+        $text = filter_var($text, FILTER_SANITIZE_STRING);
 
         $sql = "INSERT INTO Article (`titre`, `theme`, `resume`, `text`) VALUES ('$titre', '$theme', '$resume', '$text')";
 
-        if ($db->exec ($sql)) {
+        if ($db->exec($sql)) {
             return true;
         } else {
             return false;

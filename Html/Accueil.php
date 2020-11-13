@@ -53,9 +53,9 @@ foreach ($request as $row) {
 
     echo
     "<div class='container' >
-             <div class='item thematique'>'$titre'</div>
-             <div class='item article title'>'$theme'</div>
-        </div>";
+         <div class='item thematique'>$titre</div>
+         <div class='item article title'>$theme</div>
+    </div>";
 }
 
 ?>
