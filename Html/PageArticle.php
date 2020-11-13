@@ -10,12 +10,13 @@
 <div class="container">
 
     <?php
+    $ref = $_GET['reference'];
 
-        require_once "../Php/Article.php";
-        $article = new Article();
-        $article->setRef(1);
-        $article->setDataBase();
-        $article->showArticle();
+    require_once "../Php/Article.php";
+    $article = new Article();
+    $article->setRef($ref);
+    $article->setDataBase();
+    $article->showArticle();
 
     ?>
 

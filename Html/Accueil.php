@@ -50,13 +50,16 @@ $request = getDatafromDB();
 foreach ($request as $row) {
     $ref = $row["ref_Article"];
     $titre = $row["titre"];
-    $theme = $row["theme"];
+    $resume = $row["resume"];
 
     echo
     "<div class='container' >
-             <div class='item thematique'>'$titre'</div>
-             <div class='item article title'>'$theme'</div>
-        </div>";
+        <form method='get' action='PageArticle.php'>
+            <input type='submit' name='reference' value='$ref'>Voir l'article</input>
+        </form>
+        <div class='item thematique'>$titre</div>
+        <div class='item article title'>$resume</div>
+    </div>";
 }
 
 ?>
