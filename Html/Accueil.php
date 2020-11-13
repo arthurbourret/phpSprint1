@@ -20,8 +20,12 @@ $request = getDatafromDB();
     <img class="logo" src="../img/icon.png" alt="icon">
     <div class="menu">
         <a href="Accueil.php">Accueil</a>
-        <a href="ConnexionCompte.html">Connexion</a>
         <a href="NewArticle.html">Nouvel article</a>
+        <a href="ConnexionCompte.html">Connexion</a>
+        <a href="CreationCompte.html">Créer un compte</a>
+        <form action="../Php/Deconnexion.php" method="get">
+            <input type="submit" value="Déconnexion">
+        </form>
     </div>
 
 
