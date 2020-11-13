@@ -18,10 +18,3 @@ function getDatafromDB()
 
     return $db -> query($sql);
 }
-
-
-function redirige()
-{
-    header('Location: http://www.votresite.com/pageprotegee.php');
-    exit();
-}
