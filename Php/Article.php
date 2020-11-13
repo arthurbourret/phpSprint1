@@ -93,7 +93,7 @@ class Article
         $text = filter_var ($corps, FILTER_SANITIZE_STRING);
         $refUser = filter_var ($refUser, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO Article (`titre`, `theme`, `date_Publi`, `resume`, `text`, `ref_User`) VALUES ('$titre', '$theme', 2000-05-11, '$resume', '$text', '$refUser')";
+        $sql = "INSERT INTO Article (`titre`, `theme`, `resume`, `text`, `ref_User`) VALUES ('$titre', '$theme', '$resume', '$text', '$refUser')";
 
         if ($db->exec ($sql)) {
             return true;
