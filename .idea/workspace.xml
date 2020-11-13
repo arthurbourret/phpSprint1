@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3606b9c-2924-4540-abeb-8ce989de4bb4" name="Default Changelist" comment="">
+    <list default="true" id="b3606b9c-2924-4540-abeb-8ce989de4bb4" name="Default Changelist" comment="plein de truc expliqué sur discord">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Php/CreaCompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/Php/CreaCompte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/Accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Html/Accueil.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,8 @@
       <workItem from="1605221657584" duration="799000" />
       <workItem from="1605222474036" duration="1318000" />
       <workItem from="1605225095924" duration="2671000" />
-      <workItem from="1605227791907" duration="10455000" />
+      <workItem from="1605227791907" duration="10503000" />
+      <workItem from="1605262935702" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605202618143</created>
@@ -96,7 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605220802575</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="plein de truc expliqué sur discord">
+      <created>1605241550368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605241550368</updated>
+    </task>
+    <task id="LOCAL-00007" summary="plein de truc expliqué sur discord">
+      <created>1605265324112</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605265324112</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +132,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="plein de truc expliqué sur discord" />
+    <option name="LAST_COMMIT_MESSAGE" value="plein de truc expliqué sur discord" />
   </component>
   <component name="WindowStateProjectService">
     <state x="340" y="87" width="1021" height="682" key="#Deployment" timestamp="1605222370842">
@@ -151,18 +167,20 @@
     </state>
     <state x="538" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605222337112" />
     <state x="586" y="174" key="FileChooserDialogImpl/74.0.1462.864@74.0.1462.864" timestamp="1605203306920" />
-    <state x="641" y="356" key="NewPhpFileDialog" timestamp="1605213292293">
-      <screen x="74" y="0" width="1462" height="864" />
-    </state>
-    <state x="641" y="356" key="NewPhpFileDialog/74.0.1462.864@74.0.1462.864" timestamp="1605213292293" />
-    <state x="398" y="165" key="Vcs.Push.Dialog.v2" timestamp="1605220803860">
-      <screen x="74" y="0" width="1462" height="864" />
-    </state>
-    <state x="398" y="165" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1605220803860" />
-    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605222409779">
+    <state x="596" y="340" key="NewPhpFileDialog" timestamp="1605264469728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605222409779" />
+    <state x="596" y="340" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605264469728" />
+    <state x="641" y="356" key="NewPhpFileDialog/74.0.1462.864@74.0.1462.864" timestamp="1605213292293" />
+    <state x="340" y="157" key="Vcs.Push.Dialog.v2" timestamp="1605265329709">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="340" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605265329709" />
+    <state x="398" y="165" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1605220803860" />
+    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605263139065">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605263139065" />
     <state x="623" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/74.0.1462.864@74.0.1462.864" timestamp="1605213361523" />
     <state x="648" y="155" key="ftp.server.browser" timestamp="1605222062981">
       <screen x="0" y="0" width="1536" height="824" />

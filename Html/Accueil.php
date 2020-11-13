@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "../Php/AfficheArticle.php";
 
 $request = getDatafromDB();
@@ -21,8 +21,11 @@ $request = getDatafromDB();
     <div class="menu">
         <a href="Accueil.php">Accueil</a>
         <a href="NewArticle.html">Nouvel article</a>
-        <a href="ConnexionCompte.html">Connexion</a>
-        <a href="CreationCompte.html">Créer un compte</a>
+        <?php if(!isset($_SESSION['login'])){
+            echo "<a href=\"ConnexionCompte.html\">Connexion</a>
+                  <a href=\"CreationCompte.html\">Créer un compte</a>";
+        }
+        ?>
         <form action="../Php/Deconnexion.php" method="get">
             <input type="submit" value="Déconnexion">
         </form>
@@ -31,12 +34,11 @@ $request = getDatafromDB();
 
 
     <?php
-    session_start();
+
 
     if(isset($_SESSION['login'])){
         $log = $_SESSION['login'];
-        $pass = $_SESSION['pwd'];
-        echo $log.$pass;
+        echo $log;
     }
 
     ?>
