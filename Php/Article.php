@@ -4,11 +4,11 @@ class Article
 {
     private $db;
     private $ref;
+    private static $ref_article;
 
-    function __construct($ref)
+    function setRef($ref)
     {
         $this->ref = $ref;
-        $this->setDataBase();
     }
 
     function setDataBase()
@@ -24,15 +24,6 @@ class Article
                 DB_PASS
             );
 
-
-            $sql = 'SELECT * FROM Article WHERE ref_Article = :ref';
-            $sth = $this->db->prepare($sql);
-            $sth->execute(array(':ref' => $this->ref));
-            $refs = $sth->fetchAll();
-            foreach ($refs as $row) {
-                echo $row['titre'];
-            }
-
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -45,8 +36,8 @@ class Article
 
     function getAuthor($article)
     {
-        $this->ref = $article['ref_User'];
-        return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref');
+        $ref_user = $article['ref_User'];
+        return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref_user');
     }
 
     function getOneRequest($sql)
@@ -58,19 +49,6 @@ class Article
             return $row;
         }
 
-        /*
-        if ($this->db != null && $sql != '') {
-            echo $sql . '<br/>';
-            $request = $this->db->query($sql);
-
-            if ($request != null)
-                foreach ($request as $row) {
-                    echo $row . '<br/>';
-                    return $row;
-                }
-        }
-        */
-
         return null;
     }
 
@@ -81,16 +59,14 @@ class Article
         $theme = $article['theme'];
         $titre = $article['titre'];
         $body = $article['text'];
-        $vues = $article['nb_vues'];
 
         //$author = $this->getAuthor($article)['login'];
 
         echo "
         <div class='item meta'>
-            <p>Auteur moi</p>
-            <p>Vues : $vues</p>
+            <p>Auteur </p>
         </div>
-        <div class='item thematique'>$theme</div>
+        <div class='item thematique'>Thématique : $theme</div>
         <div class='item article content'>$body</div>
         <div class='item article title'>$titre</div>";
     }
@@ -106,18 +82,6 @@ class Article
             DB_PASS
         );
 
-        $titre = filter_var($titre, FILTER_SANITIZE_STRING);
-        $theme = filter_var($theme, FILTER_SANITIZE_STRING);
-        $resume = filter_var($resume, FILTER_SANITIZE_STRING);
-        $text = filter_var($text, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO Article (`titre`, `theme`, `resume`, `text`) VALUES ('$titre', '$theme', '$resume', '$text')";
-
-        if ($db->exec($sql)) {
-            return true;
-        } else {
-            return false;
-        }
     }
-
 }
