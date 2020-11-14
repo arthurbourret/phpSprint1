@@ -96,4 +96,25 @@ class Article
         }
     }
 
+    function deleteArticle($ref){
+
+        include_once('DB.inc.php');
+
+        $db = new PDO(
+            "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+            DB_USER,
+            DB_PASS
+        );
+
+        $ref = filter_var ($ref, FILTER_SANITIZE_STRING);
+
+        $sql = "DELETE FROM Article WHERE ref_Article = '$ref'";
+
+        if ($db->exec ($sql)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

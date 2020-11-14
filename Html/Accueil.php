@@ -54,9 +54,7 @@ foreach ($request as $row) {
 
     echo
     "<div class='container' >
-        <form method='get' action='PageArticle.php'>
-            <input type='submit' name='reference' value='$ref'>Voir l'article</input>
-        </form>
+        <a href=\"PageArticle.php?id_ref=$ref\">Consulter l'article</a>
         <div class='item thematique'>$titre</div>
         <div class='item article title'>$resume</div>
     </div>";
