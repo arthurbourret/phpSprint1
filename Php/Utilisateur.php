@@ -68,7 +68,7 @@ class Utilisateur
         $login = filter_var ($login, FILTER_SANITIZE_STRING);
         $pass = filter_var ($password, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO SITE_User (`login`, `pass`) VALUES ('$login', '$pass')";
+        $sql = "INSERT INTO SITE_User VALUES ('$login', '$pass')";
 
         if ($db->exec ($sql)) {
             return true;

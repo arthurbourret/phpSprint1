@@ -34,10 +34,13 @@ class Article
         return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref');
     }
 
-    function getAuthor($article)
+    function getAuthor()
     {
-        $ref_user = $article['ref_User'];
-        return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref_user');
+        $article = $this->getArticle();
+
+        return $article['auteur'];
+        //$ref_user = $article['ref_User'];
+        //return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref_user');
     }
 
     function getOneRequest($sql)
@@ -59,19 +62,18 @@ class Article
         $theme = $article['theme'];
         $titre = $article['titre'];
         $body = $article['text'];
-
-        //$author = $this->getAuthor($article)['login'];
+        $author = $article['auteur'];
 
         echo "
         <div class='item meta'>
-            <p>Auteur </p>
+            <p>Auteur : $author </p>
         </div>
         <div class='item thematique'>Thématique : $theme</div>
         <div class='item article content'>$body</div>
         <div class='item article title'>$titre</div>";
     }
 
-    function creatArticle($titre,$theme,$resume,$corps,$refUser){
+    function creatArticle($titre,$theme,$resume,$corps,$auteur){
 
         include_once('DB.inc.php');
 
@@ -85,9 +87,9 @@ class Article
         $theme = filter_var ($theme, FILTER_SANITIZE_STRING);
         $resume = filter_var ($resume, FILTER_SANITIZE_STRING);
         $text = filter_var ($corps, FILTER_SANITIZE_STRING);
-        $refUser = filter_var ($refUser, FILTER_SANITIZE_STRING);
+        $auteur = filter_var ($auteur, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO Article (`titre`, `theme`, `resume`, `text`, `ref_User`) VALUES ('$titre', '$theme', '$resume', '$text', '$refUser')";
+        $sql = "INSERT INTO Article (`titre`, `theme`, `resume`, `text`, `auteur`) VALUES ('$titre', '$theme', '$resume', '$text', '$auteur')";
 
         if ($db->exec ($sql)) {
             return true;

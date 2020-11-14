@@ -20,23 +20,25 @@
     $article->setDataBase();
     $article->showArticle();
 
-    if(isset($_POST['delete'])) {
-        if(isset($_SESSION['login'])) {
-            if($article->deleteArticle($ref)){
-                header('Location: ../Html/Accueil.php');
-            } else {
-                echo("erreur");
-            }
+    if ($_SESSION['login'] == $article->getAuthor()) {
+        echo("<form method=\"post\">
+                <input type=\"submit\" name=\"delete\"
+                 value=\"Supprimer l'article\"/>
+              </form>");
+    }
+
+    if (isset($_POST['delete'])) {
+
+        if ($_SESSION['login'] == $article->getAuthor()) {
+            $article->deleteArticle($ref);
+            header('Location: ../Html/Accueil.php');
         } else {
-            echo("vous ne pouvez pas supprimer d'article");
+            echo("erreur");
         }
+
     }
     ?>
 
-    <form method="post">
-        <input type="submit" name="delete"
-               value="Supprimer l'article"/>
-    </form>
 
 </div>
 

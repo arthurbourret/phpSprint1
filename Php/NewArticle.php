@@ -11,13 +11,15 @@ $titre = $_POST['titre'];
 $theme = $_POST['thematique'];
 $resume = $_POST['resume'];
 $corps = $_POST['corps_arcticle'];
-$refUser = $user->getUserRef($_SESSION['login']);
+$auteur = $_SESSION['login'];
 
 if (!empty($titre) && !empty($theme) && !empty($resume) && !empty($corps)){
-    if ($art->creatArticle($titre,$theme,$resume,$corps,$refUser)){
+    if ($art->creatArticle($titre,$theme,$resume,$corps,$auteur)){
         header('Location: ../Html/Accueil.php');
     } else {
         echo("test ko");
     }
+
+} else {
 
 }
