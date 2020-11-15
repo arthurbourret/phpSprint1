@@ -68,10 +68,15 @@ class Utilisateur
         $login = filter_var ($login, FILTER_SANITIZE_STRING);
         $pass = filter_var ($password, FILTER_SANITIZE_STRING);
 
-        $sql = "INSERT INTO SITE_User VALUES ('$login', '$pass')";
+        $sql = "SELECT count(*) FROM SITE_User WHERE login = '$login'";
 
-        if ($db->exec ($sql)) {
-            return true;
+        if ($db->exec ($sql) == 0) {
+            $sql = "INSERT INTO SITE_User VALUES ('$login', '$pass')";
+            if ($db->exec ($sql)) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
@@ -115,18 +120,7 @@ class Utilisateur
         }
     }
 
-    public function getUserRef($login){
+    public function verifNameUser($login) {
 
-        include_once('DB.inc.php');
-
-        $db = new PDO(
-            "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
-            DB_USER,
-            DB_PASS
-        );
-
-        $sql = "SELECT ref_User FROM SITE_User WHERE login = '$login'";
-
-        return $db->exec($sql);
     }
 }

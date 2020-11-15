@@ -2,7 +2,7 @@
 session_start();
 require_once "../Php/AfficheArticle.php";
 
-$request = getAllDatafromDB();
+$request = getMyDatafromDB();
 
 ?>
 
@@ -20,17 +20,11 @@ $request = getAllDatafromDB();
     <img class="logo" src="../img/icon.png" alt="icon">
     <div class="menu">
         <a href="Accueil.php">Accueil</a>
-        <?php if(!isset($_SESSION['login'])){
-            echo "<a href=\"ConnexionCompte.html\">Connexion</a>
-                  <a href=\"CreationCompte.html\">Créer un compte</a>";
-        } else {
-            echo "<a href=\"NewArticle.html\">Nouvel article</a>
-                  <a href=\"MesArticles.php\">Mes article</a>
-                  <form action=\"../Php/Deconnexion.php\" method=\"\">
-                        <input type=\"submit\" value=\"Déconnexion\">
-                  </form>";
-        }
-        ?>
+        <a href="NewArticle.html">Nouvel article</a>
+        <a href="MesArticles.php">Mes article</a>
+        <form action="../Php/Deconnexion.php" method="">
+            <input type="submit" value="Déconnexion">
+        </form>
     </div>
 
 
@@ -69,3 +63,4 @@ foreach ($request as $row) {
 </body>
 
 </html>
+
