@@ -2,7 +2,7 @@
 session_start();
 require_once "../Php/AfficheArticle.php";
 
-$request = getAllDatafromDB();
+$request = getArticleAccueil();
 
 ?>
 
@@ -62,10 +62,6 @@ foreach ($request as $row) {
 }
 
 ?>
-
-<footer>
-    <div class="copyright">©2020</div>
-</footer>
 </body>
 
 </html>

@@ -2,7 +2,12 @@
 session_start();
 require_once "../Php/AfficheArticle.php";
 
-$request = getMyDatafromDB();
+if (!isset($_POST['etat'])){
+    $request = getMyDatafromDB('all');
+} else {
+    $request = getMyDatafromDB($_POST['etat']);
+}
+
 
 ?>
 
@@ -27,8 +32,15 @@ $request = getMyDatafromDB();
         </form>
     </div>
 
-
-
+    <form method="post">
+        <select name="etat" size="1" >
+            <option value="all">Tout les articles
+            <option value="brouillon">Brouillon
+            <option value="publier">Publier
+            <option value="archiver">Archiver
+        </select>
+        <input type="submit" value="Sélectionner">
+    </form>
     <?php
 
 
@@ -56,10 +68,6 @@ foreach ($request as $row) {
 }
 
 ?>
-
-<footer>
-    <div class="copyright">©2020</div>
-</footer>
 </body>
 
 </html>

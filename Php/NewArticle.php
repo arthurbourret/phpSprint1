@@ -13,8 +13,16 @@ $resume = $_POST['resume'];
 $corps = $_POST['corps_arcticle'];
 $auteur = $_SESSION['login'];
 
+if ($_POST['enregistrer']){
+    $etat = 'enregistrer';
+}
+
+if (['brouillon']){
+    $etat = 'brouillon';
+}
+
 if (!empty($titre) && !empty($theme) && !empty($resume) && !empty($corps)){
-    if ($art->creatArticle($titre,$theme,$resume,$corps,$auteur)){
+    if ($art->creatArticle($titre,$theme,$resume,$corps,$auteur, $etat)){
         header('Location: ../Html/Accueil.php');
     } else {
         echo("test ko");
