@@ -11,5 +11,5 @@ if ($use->getAuth($log, $pass)) {
     $_SESSION['pwd'] = $pass;
     header('Location: ../Html/Accueil.php');
 } else {
-    header('Location: ../Html/ConnexionCompte.html');
+    header('Location: ../Html/ConnexionCompte.php');
 }

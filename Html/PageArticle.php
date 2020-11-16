@@ -8,15 +8,15 @@
 </head>
 <body>
 <header>
-    <img class="logo" src="../img/icon.png" alt="icon">
-    <div class="menu">
-        <a href="Accueil.php">Accueil</a>
-        <a href="NewArticle.html">Nouvel article</a>
-        <a href="MesArticles.php">Mes article</a>
-        <form action="../Php/Deconnexion.php" method="">
-            <input type="submit" value="Déconnexion">
-        </form>
-    </div>
+
+
+    <?php
+
+    include_once 'Menu.php';
+    showMenu();
+
+    ?>
+
 </header>
 <div class="container">
 
@@ -36,7 +36,7 @@
                 <input type=\"submit\" name=\"delete\"
                  value=\"Supprimer l'article\"/>
               </form>");
-        if($article->getState() == 'brouillon'){
+        if ($article->getState() == 'brouillon') {
             echo("<form method=\"post\">
                 <input type=\"submit\" name=\"publish\"
                  value=\"Publier l'article\"/>
@@ -54,12 +54,12 @@
     }
 
     if (isset($_POST['publish'])) {
-        $article->setState($ref,'publier');
+        $article->setState($ref, 'publier');
         header("Refresh:0");
     }
 
     if (isset($_POST['archive'])) {
-        $article->setState($ref,'archiver');
+        $article->setState($ref, 'archiver');
         header("Refresh:0");
     }
     ?>

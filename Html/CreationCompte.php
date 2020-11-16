@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="../Css/styleConnexion.css">
 </head>
 <body>
+
 <header>
-    <img class="logo" src="../img/icon.png" alt="icon">
-    <div class="menu">
-        <a href="ConnexionCompte.html">Connexion</a>
-        <a href="CreationCompte.html">Créer un compte</a>
-    </div>
+
+    <?php
+
+    include_once 'Menu.php';
+    showMenu();
+
+    ?>
+
 </header>
+
 <form method="post" action="../Php/CreaCompte.php">
 
     <div class="connexion">

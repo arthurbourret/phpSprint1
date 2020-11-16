@@ -73,3 +73,8 @@ a{
     bottom: 5px;
     right: 10px;
 }
+
+.connect {
+    border-color: black;
+    border-radius: 5px;
+}

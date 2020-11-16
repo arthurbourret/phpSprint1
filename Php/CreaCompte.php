@@ -12,10 +12,10 @@ if ($pass == $verif) {
         $_SESSION['login'] = $log;
         header('Location: ../Html/Accueil.php');
     } else {
-        header('Location: ../Html/CreationCompte.html');
+        header('Location: ../Html/CreationCompte.php');
         echo "erreur";
     }
 } else {
-    header('Location: ../Html/CreationCompte.html');
+    header('Location: ../Html/CreationCompte.php');
     echo "les mots de passes ne sont pas identiques";
 }

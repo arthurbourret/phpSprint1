@@ -8,12 +8,16 @@
 </head>
 <body>
 <header>
-    <img class="logo" src="../img/icon.png" alt="icon">
-    <div class="menu">
-        <a href="ConnexionCompte.html">Connexion</a>
-        <a href="CreationCompte.html">Créer un compte</a>
-    </div>
+
+    <?php
+
+    include_once 'Menu.php';
+    showMenu();
+
+    ?>
+
 </header>
+
 <form method="post" action="../Php/ConnexCompte.php">
 
     <div class="connexion">
@@ -24,7 +28,7 @@
 
         <input type="submit" class="bouton" value="Connexion" />
         <br/>
-        <a href="CreationCompte.html" class="creercompe">Créer un compte</a>
+        <a href="CreationCompte.php" class="creercompe">Créer un compte</a>
     </div>
 
 </form>

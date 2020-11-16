@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="../Css/styleAccueil.css">
 </head>
 <body>
+
 <header>
-    <img class="logo" src="../img/icon.png" alt="icon">
-    <div class="menu">
-        <a href="Accueil.php">Accueil</a>
-        <a href="NewArticle.html">Nouvel article</a>
-        <a href="MesArticles.php">Mes article</a>
-        <form action="../Php/Deconnexion.php" method="">
-            <input type="submit" value="Déconnexion">
-        </form>
-    </div>
+
+    <?php
+
+    include_once 'Menu.php';
+    showMenu();
+
+    ?>
+
 </header>
+
 <form action="../Php/NewArticle.php" method="post">
 
     <div class="container">
         <div class="item meta">
-            <label >Thématique</label>
-            <select name="theme" size="1" >
+            <label>Thématique</label>
+            <select name="theme" size="1">
                 <option value="sport">Sport
                 <option value="cuisine">Cuisine
                 <option value="cinema">Cinema
@@ -33,11 +34,11 @@
 
         <div class="item nav">
             <label for="resume">Résumer</label>
-            <textarea class="inpClass" id="resume" type="text" name="resume" cols="15" rows="20" ></textarea>
+            <textarea class="inpClass" id="resume" type="text" name="resume" cols="15" rows="20"></textarea>
         </div>
 
         <div class="item article content">
-            <textarea class="inpClass" type="text" name="corps_arcticle" cols="70" rows="30" ></textarea>
+            <textarea class="inpClass" type="text" name="corps_arcticle" cols="70" rows="30"></textarea>
         </div>
 
         <div class="item article title">
