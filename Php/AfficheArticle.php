@@ -27,7 +27,7 @@ function getArticleAccueil($theme)
     return $db -> query($sql);
 }
 
-function getMyDatafromDB($etat)
+function getMyDatafromDB($etat, $theme)
 {
     include_once('DB.inc.php');
     $db = null;
@@ -43,12 +43,21 @@ function getMyDatafromDB($etat)
 
     $log = $_SESSION['login'];
     $etat = filter_var ($etat, FILTER_SANITIZE_STRING);
+    $theme = filter_var ($theme, FILTER_SANITIZE_STRING);
 
-    if ($etat == 'all'){
+    if ($etat == 'all' && $theme == 'all'){
         $sql = "SELECT * FROM Article WHERE auteur ='$log' ";
-    } else {
-        $sql = "SELECT * FROM Article WHERE auteur ='$log' AND etat_Publi = '$etat'";
     }
+    if ($etat == 'all' && !($theme == 'all')){
+        $sql = "SELECT * FROM Article WHERE auteur ='$log' AND theme = '$theme' ";
+    }
+    if (!($etat == 'all') && $theme == 'all'){
+        $sql = "SELECT * FROM Article WHERE auteur ='$log' AND etat_Publi = '$etat' ";
+    }
+    if (!($etat == 'all') && !($theme == 'all')){
+        $sql = "SELECT * FROM Article WHERE auteur ='$log' AND etat_Publi = '$etat' AND theme = '$theme' ";
+    }
+
 
 
     return $db -> query($sql);

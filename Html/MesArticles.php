@@ -2,10 +2,10 @@
 session_start();
 require_once "../Php/AfficheArticle.php";
 
-if (!isset($_POST['etat'])){
-    $request = getMyDatafromDB('all');
+if (!isset($_POST['etat']) && !isset($_POST['theme'])){
+    $request = getMyDatafromDB('all','all');
 } else {
-    $request = getMyDatafromDB($_POST['etat']);
+    $request = getMyDatafromDB($_POST['etat'],$_POST['theme']);
 }
 
 
@@ -49,6 +49,13 @@ if (!isset($_POST['etat'])){
         <option value="brouillon">Brouillon
         <option value="publier">Publier
         <option value="archiver">Archiver
+    </select>
+    <select name="theme" size="1" >
+        <option value="all">Tout les thèmes
+        <option value="sport">Sport
+        <option value="cuisine">Cuisine
+        <option value="cinema">Cinema
+        <option value="informatique">Informatique
     </select>
     <input type="submit" value="Sélectionner">
 </form>
