@@ -7,12 +7,28 @@
     <link rel="stylesheet" href="../Css/styleAccueil.css">
 </head>
 <body>
+<header>
+    <img class="logo" src="../img/icon.png" alt="icon">
+    <div class="menu">
+        <a href="Accueil.php">Accueil</a>
+        <a href="NewArticle.html">Nouvel article</a>
+        <a href="MesArticles.php">Mes article</a>
+        <form action="../Php/Deconnexion.php" method="">
+            <input type="submit" value="Déconnexion">
+        </form>
+    </div>
+</header>
 <form action="../Php/NewArticle.php" method="post">
 
     <div class="container">
         <div class="item meta">
-            <label for="thematique">Thématique</label>
-            <input class="inpClass" id="thematique" type="text" name="thematique">
+            <label >Thématique</label>
+            <select name="theme" size="1" >
+                <option value="sport">Sport
+                <option value="cuisine">Cuisine
+                <option value="cinema">Cinema
+                <option value="informatique">Informatique
+            </select>
         </div>
 
         <div class="item nav">
@@ -28,10 +44,14 @@
             <label for="titre">Titre</label>
             <input class="inpClass" id="titre" type="text" name="titre">
         </div>
+
     </div>
 
-    <button type="submit" id="enregistrer">Enregistrer</button>
-    <button type="submit" id="brouillon">Brouillon</button>
+    <form method="post">
+        <input type="submit" name="publier" value="Publier"/>
+        <input type="submit" name="brouillon" value="Brouillon"/>
+    </form>
+
 </form>
 </body>
 </html>

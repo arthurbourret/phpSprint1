@@ -39,8 +39,13 @@ class Article
         $article = $this->getArticle();
 
         return $article['auteur'];
-        //$ref_user = $article['ref_User'];
-        //return $this->getOneRequest('SELECT * FROM SITE_User INNER JOIN Article ON SITE_User.ref_User=Article.ref_User WHERE ref_User = :ref_user');
+    }
+
+    function getState()
+    {
+        $article = $this->getArticle();
+
+        return $article['etat_Publi'];
     }
 
     function getOneRequest($sql)
@@ -112,6 +117,28 @@ class Article
         $ref = filter_var ($ref, FILTER_SANITIZE_STRING);
 
         $sql = "DELETE FROM Article WHERE ref_Article = '$ref'";
+
+        if ($db->exec ($sql)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function setState($ref, $etat_Publi){
+
+        include_once('DB.inc.php');
+
+        $db = new PDO(
+            "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+            DB_USER,
+            DB_PASS
+        );
+
+        $ref = filter_var ($ref, FILTER_SANITIZE_STRING);
+        $etat_Publi = filter_var ($etat_Publi, FILTER_SANITIZE_STRING);
+
+        $sql = "UPDATE Article SET etat_Publi = '$etat_Publi' WHERE ref_Article = '$ref'";
 
         if ($db->exec ($sql)) {
             return true;

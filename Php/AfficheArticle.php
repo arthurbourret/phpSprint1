@@ -2,7 +2,7 @@
 
 session_start();
 
-function getArticleAccueil()
+function getArticleAccueil($theme)
 {
     include_once('DB.inc.php');
     $db = null;
@@ -16,7 +16,13 @@ function getArticleAccueil()
         echo $e->getMessage();
     }
 
-    $sql = "SELECT * FROM Article WHERE etat_Publi = 'publier'";
+    $theme = filter_var ($theme, FILTER_SANITIZE_STRING);
+
+    if ($theme == 'all'){
+        $sql = "SELECT * FROM Article WHERE etat_Publi = 'publier'";
+    } else {
+        $sql = "SELECT * FROM Article WHERE etat_Publi = 'publier' AND theme = '$theme'";
+    }
 
     return $db -> query($sql);
 }

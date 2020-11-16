@@ -7,6 +7,17 @@
     <title>NewArticle</title>
 </head>
 <body>
+<header>
+    <img class="logo" src="../img/icon.png" alt="icon">
+    <div class="menu">
+        <a href="Accueil.php">Accueil</a>
+        <a href="NewArticle.html">Nouvel article</a>
+        <a href="MesArticles.php">Mes article</a>
+        <form action="../Php/Deconnexion.php" method="">
+            <input type="submit" value="Déconnexion">
+        </form>
+    </div>
+</header>
 <div class="container">
 
     <?php
@@ -25,17 +36,31 @@
                 <input type=\"submit\" name=\"delete\"
                  value=\"Supprimer l'article\"/>
               </form>");
+        if($article->getState() == 'brouillon'){
+            echo("<form method=\"post\">
+                <input type=\"submit\" name=\"publish\"
+                 value=\"Publier l'article\"/>
+              </form>");
+            echo("<form method=\"post\">
+                <input type=\"submit\" name=\"archive\"
+                 value=\"Archiver l'article\"/>
+              </form>");
+        }
     }
 
     if (isset($_POST['delete'])) {
+        $article->deleteArticle($ref);
+        header('Location: ../Html/Accueil.php');
+    }
 
-        if ($_SESSION['login'] == $article->getAuthor()) {
-            $article->deleteArticle($ref);
-            header('Location: ../Html/Accueil.php');
-        } else {
-            echo("erreur");
-        }
+    if (isset($_POST['publish'])) {
+        $article->setState($ref,'publier');
+        header("Refresh:0");
+    }
 
+    if (isset($_POST['archive'])) {
+        $article->setState($ref,'archiver');
+        header("Refresh:0");
     }
     ?>
 

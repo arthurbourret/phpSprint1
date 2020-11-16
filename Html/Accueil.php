@@ -2,7 +2,11 @@
 session_start();
 require_once "../Php/AfficheArticle.php";
 
-$request = getArticleAccueil();
+if (!isset($_POST['theme'])){
+    $request = getArticleAccueil('all');
+} else {
+    $request = getArticleAccueil($_POST['theme']);
+}
 
 ?>
 
@@ -45,6 +49,18 @@ $request = getArticleAccueil();
 
     ?>
 </header>
+
+<form method="post">
+    <select name="theme" size="1" >
+        <option value="all">Tout les thèmes
+        <option value="sport">Sport
+        <option value="cuisine">Cuisine
+        <option value="cinema">Cinema
+        <option value="informatique">Informatique
+    </select>
+    <input type="submit" value="Sélectionner">
+</form>
+
 
 <?php
 

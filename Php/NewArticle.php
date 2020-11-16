@@ -8,16 +8,16 @@ $art = new Article();
 $user = new Utilisateur();
 
 $titre = $_POST['titre'];
-$theme = $_POST['thematique'];
+$theme = $_POST['theme'];
 $resume = $_POST['resume'];
 $corps = $_POST['corps_arcticle'];
 $auteur = $_SESSION['login'];
 
-if ($_POST['enregistrer']){
-    $etat = 'enregistrer';
+if (isset($_POST['publier'])){
+    $etat = 'publier';
 }
 
-if (['brouillon']){
+if (isset($_POST['brouillon'])){
     $etat = 'brouillon';
 }
 

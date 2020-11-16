@@ -15,7 +15,7 @@ if (!isset($_POST['etat'])){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Blog</title>
+    <title>Mes Articles</title>
     <link rel="stylesheet" href="../Css/styleAccueil.css">
     <link rel="stylesheet" href="../Css/stylesheet.css">
 </head>
@@ -32,15 +32,6 @@ if (!isset($_POST['etat'])){
         </form>
     </div>
 
-    <form method="post">
-        <select name="etat" size="1" >
-            <option value="all">Tout les articles
-            <option value="brouillon">Brouillon
-            <option value="publier">Publier
-            <option value="archiver">Archiver
-        </select>
-        <input type="submit" value="Sélectionner">
-    </form>
     <?php
 
 
@@ -51,6 +42,16 @@ if (!isset($_POST['etat'])){
 
     ?>
 </header>
+
+<form method="post">
+    <select name="etat" size="1" >
+        <option value="all">Tout les articles
+        <option value="brouillon">Brouillon
+        <option value="publier">Publier
+        <option value="archiver">Archiver
+    </select>
+    <input type="submit" value="Sélectionner">
+</form>
 
 <?php
 
