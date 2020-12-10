@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Connexion</title>
+    <title>Création compte</title>
     <link rel="stylesheet" href="../Css/styleAccueil.css">
     <link rel="stylesheet" href="../Css/styleConnexion.css">
 </head>
 <body>
+
 <header>
 
     <?php
@@ -18,20 +19,18 @@
 
 </header>
 
-<form method="post" action="../Php/ConnexCompte.php">
+<form method="post" action="../Model/CreaCompte.php">
 
     <div class="connexion">
-        <p class="titreCo">CONNEXION</p>
+        <p class="titreCo">CREATION DE COMPTE</p>
 
         <input class="saisie log" type="text" placeholder="Login" name="login">
         <input class="saisie pass" type="password" placeholder="Mot de passe" name="password">
+        <input class="saisie verif" type="password" placeholder="Mot de passe" name="verification">
 
-        <input type="submit" class="bouton" value="Connexion" />
-        <br/>
-        <a href="CreationCompte.php" class="creercompe">Créer un compte</a>
+        <button class="bouton">Creer</button>
     </div>
 
-</form>
 </form>
 </body>
 </html>

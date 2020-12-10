@@ -28,7 +28,7 @@ function userConnected($log)
                   
                   <div class='connect'
                     <p>Utilisateur : $log</p>
-                    <form action='../Php/Deconnexion.php' method=''>
+                    <form action='../Model/Deconnexion.php' method=''>
                         <input type='submit' value='Déconnexion'>
                     </form>
                   </div>";

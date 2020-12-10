@@ -2,7 +2,7 @@
 session_start();
 
 include_once("Article.php");
-include_once ("Utilisateur.php");
+include_once("Utilisateur.php");
 
 $art = new Article();
 $user = new Utilisateur();
