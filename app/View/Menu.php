@@ -1,17 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>header</title>
+</head>
+
 <?php
-
-define("BASE", "<img class='logo' src='../img/icon.png' alt='icon'>
-    <div class='menu'>
-        <a href='Accueil.php'>Accueil</a>");
-
-define("NOCONNECT", "<a href='ConnexionCompte.php'>Connexion</a>
-                  <a href='CreationCompte.php'>Créer un compte</a>");
 
 function showMenu()
 {
-    $menu = BASE;
+    $menu = "<img class='logo' src='../../img/icon.png' alt='icon'>
+    <div class='menu'>
+        <a href='Accueil.php'>Accueil</a>";
     if (!isset($_SESSION['login'])) {
-        $menu = $menu . NOCONNECT;
+        $menu = $menu . "<a href='ConnexionCompte.php'>Connexion</a>
+                  <a href='CreationCompte.php'>Créer un compte</a>";
     } else {
         $menu = $menu . userConnected($_SESSION['login']);
     }

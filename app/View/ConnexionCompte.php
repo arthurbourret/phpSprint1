@@ -18,7 +18,7 @@
 
 </header>
 
-<form method="post" action="../Model/ConnexCompte.php">
+<form method="post" action="../app/Model/ConnexCompte.php">
 
     <div class="connexion">
         <p class="titreCo">CONNEXION</p>
