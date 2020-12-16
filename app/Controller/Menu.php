@@ -12,10 +12,10 @@ function showMenu()
 {
     $menu = "<img class='logo' src='../../img/icon.png' alt='icon'>
     <div class='menu'>
-        <a href='Accueil.php'>Accueil</a>";
+        <a href='../View/Accueil.php'>Accueil</a>";
     if (!isset($_SESSION['login'])) {
-        $menu = $menu . "<a href='ConnexionCompte.php'>Connexion</a>
-                  <a href='CreationCompte.php'>Créer un compte</a>";
+        $menu = $menu . "<a href='../View/ConnexionCompte.php'>Connexion</a>
+                  <a href='../View/CreationCompte.php'>Créer un compte</a>";
     } else {
         $menu = $menu . userConnected($_SESSION['login']);
     }
@@ -27,12 +27,12 @@ function showMenu()
 
 function userConnected($log)
 {
-    return "<a href='NewArticle.php'>Nouvel article</a>
-                  <a href='MesArticles.php'>Mes article</a>
+    return "<a href='../View/NewArticle.php'>Nouvel article</a>
+                  <a href='../View/MesArticles.php'>Mes article</a>
                   
                   <div class='connect'
                     <p>Utilisateur : $log</p>
-                    <form action='../Model/Deconnexion.php' method=''>
+                    <form action='Deconnexion.php' method=''>
                         <input type='submit' value='Déconnexion'>
                     </form>
                   </div>";
