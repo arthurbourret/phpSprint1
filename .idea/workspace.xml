@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3606b9c-2924-4540-abeb-8ce989de4bb4" name="Default Changelist" comment="modifs (jsp gros flemme)">
+      <change afterPath="$PROJECT_DIR$/app/Controller/AfficherMesArticles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/AfficherArticleAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/AfficherArticleAccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/AfficheArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AfficheArticle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/MesArticles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/MesArticles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +233,7 @@
       <option name="project" value="LOCAL" />
       <updated>1607604051170</updated>
     </task>
-    <task id="LOCAL-00021" summary="modifs (jsp gros flemme)">
-      <created>1608243754026</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1608243754026</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,10 +256,10 @@
     <MESSAGE value="commit" />
     <MESSAGE value="plein de truc expliqué sur discord" />
     <MESSAGE value="supprimer un article et amélioration lien vers article" />
+    <MESSAGE value="modifs (jsp gros flemme)" />
     <MESSAGE value="add menu.php" />
     <MESSAGE value="mvc" />
-    <MESSAGE value="modifs (jsp gros flemme)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifs (jsp gros flemme)" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="391" y="91" width="1021" height="682" key="#Deployment" timestamp="1607334399359">
@@ -322,10 +320,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1605481452404" />
-    <state x="340" y="157" key="Vcs.Push.Dialog.v2" timestamp="1608243755653">
+    <state x="340" y="157" key="Vcs.Push.Dialog.v2" timestamp="1608242340319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="340" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608243755653" />
+    <state x="340" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608242340319" />
     <state x="388" y="165" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1605568663667" />
     <state x="391" y="165" key="Vcs.Push.Dialog.v2/66.0.1470.864@66.0.1470.864" timestamp="1607604053403" />
     <state x="398" y="165" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1605220803860" />
@@ -345,10 +343,9 @@
       <screen x="74" y="0" width="1462" height="864" />
     </state>
     <state x="607" y="339" key="git4idea.remote.GitConfigureRemotesDialog/74.0.1462.864@74.0.1462.864" timestamp="1605202826174" />
-    <state x="414" y="173" width="707" height="647" key="search.everywhere.popup" timestamp="1608245776010">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="468" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605204573024">
+      <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state x="414" y="173" width="707" height="647" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608245776010" />
     <state x="468" y="181" width="672" height="678" key="search.everywhere.popup/74.0.1462.864@74.0.1462.864" timestamp="1605204573024" />
     <state x="636" y="223" key="svn.repositoryBrowser" timestamp="1605203332706">
       <screen x="74" y="0" width="1462" height="864" />

@@ -30,12 +30,12 @@ function userConnected($log)
     return "<a href='NewArticle.php'>Nouvel article</a>
                   <a href='MesArticles.php'>Mes articles</a>
                   
-                  <div class='connect'
+                  <a class='connect'
                     <p>Utilisateur : $log</p>
                     <form action='../Controller/Deconnexion.php' method=''>
-                        <input type='submit' value='Déconnexion'>
+                        <input class='deco_submit' type='submit' value='Déconnexion'>
                     </form>
-                  </div>";
+                  </a>";
 }
 
 ?>

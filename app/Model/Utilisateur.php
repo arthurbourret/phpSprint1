@@ -13,7 +13,7 @@ class Utilisateur
      * @return boolean selon que l'authentification est ok ou pas.
      */
     public function getAuth($login, $password) {
-        include_once('DB.inc.php');
+        include_once('../config/DB.inc.php');
         if (!is_null ($login) && !is_null ($password)) {
             $db = null;
             try {
@@ -57,7 +57,7 @@ class Utilisateur
      */
     public function createUser($login, $password) {
 
-        include_once('DB.inc.php');
+        include_once('../config/DB.inc.php');
 
         $db = new PDO(
             "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
@@ -92,7 +92,7 @@ class Utilisateur
      */
     public function updateUser($password) {
 
-        include_once('DB.inc.php');
+        include_once('../config/DB.inc.php');
 
         $db = new PDO(
             "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",

@@ -5,7 +5,6 @@ class Article
 {
     private $db;
     private $ref;
-    private static $ref_article;
 
     function setRef($ref)
     {
@@ -14,7 +13,7 @@ class Article
 
     function setDataBase()
     {
-        include_once('..config/DB.inc.php');
+        include_once('../config/DB.inc.php');
 
         $this->db = null;
 
@@ -104,7 +103,7 @@ class Article
      */
     function creatArticle($titre,$theme,$resume,$corps,$auteur,$etat_Publi){
 
-        include_once('DB.inc.php');
+        include_once('../config/DB.inc.php');
 
         $db = new PDO(
             "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
@@ -136,7 +135,7 @@ class Article
      */
     function deleteArticle($ref){
 
-        include_once('DB.inc.php');
+        include_once('../config/DB.inc.php');
 
         $db = new PDO(
             "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
@@ -164,7 +163,7 @@ class Article
      */
     function setState($ref, $etat_Publi){
 
-        include_once('DB.inc.php');
+        include_once('../config/DB.inc.php');
 
         $db = new PDO(
             "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
