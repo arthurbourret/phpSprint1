@@ -30,11 +30,17 @@ class Article
         }
     }
 
+    /**
+     * @return l'article correspondant à la ref donné
+     */
     function getArticle()
     {
         return $this->getOneRequest('SELECT * FROM Article WHERE ref_Article = :ref');
     }
 
+    /**
+     * @return l'auteur de l'article correspondant
+     */
     function getAuthor()
     {
         $article = $this->getArticle();
@@ -42,6 +48,9 @@ class Article
         return $article['auteur'];
     }
 
+    /**
+     * @return l'état de publication de l'article
+     */
     function getState()
     {
         $article = $this->getArticle();
@@ -61,6 +70,9 @@ class Article
         return null;
     }
 
+    /**
+     * Affiche le résumé de l'article sur les view
+     */
     function showArticle()
     {
         $article = $this->getArticle();
@@ -79,6 +91,17 @@ class Article
         <div class='item article title'>$titre</div>";
     }
 
+    /**
+     *
+     * Permet d'enregistrer un nouvel article avec les paramètres passés
+     * @param $titre le titre de l'article
+     * @param $theme le theme de l'article
+     * @param $resume le résumé de l'article
+     * @param $corps le contenu de l'article
+     * @param $auteur l'auteur de l'article
+     * @param $etat_Publi l'état de publication de l'article
+     * @return bool si l'article est bien enregistré ou non
+     */
     function creatArticle($titre,$theme,$resume,$corps,$auteur,$etat_Publi){
 
         include_once('DB.inc.php');
@@ -105,6 +128,12 @@ class Article
         }
     }
 
+    /**
+     *
+     *  permet de supprimer un article grâce à sa référence
+     * @param $ref la référence de l'article
+     * @return si l'article a bien été supprimé ou non
+     */
     function deleteArticle($ref){
 
         include_once('DB.inc.php');
@@ -126,6 +155,13 @@ class Article
         }
     }
 
+    /**
+     *
+     * Permet de modifier l'état de publication de l'article
+     * @param $ref la référence de l'articel
+     * @param $etat_Publi le nouvel état de publication de l'article
+     * @return si l'état a bien été changé ou non
+     */
     function setState($ref, $etat_Publi){
 
         include_once('DB.inc.php');
@@ -148,6 +184,11 @@ class Article
         }
     }
 
+    /**
+     * Permet de sélectionner dans la base de donnés tout les articles à afficher sur l'accueil en choisissant le thème
+     * @param $theme le thème sélectionné
+     * @return false|PDOStatement
+     */
     function getArticleAccueil($theme){
         include_once('../config/DB.inc.php');
         $db = null;
@@ -172,6 +213,13 @@ class Article
         return $db -> query($sql);
     }
 
+    /**
+     *
+     * Permet de sélectionner dans la base de données tout les articles de la personne connecté en fonction du thème et de l'état choisis
+     * @param $etat l'état de publication sélectionné
+     * @param $theme le thème sélectionné
+     * @return false|PDOStatement
+     */
     function getMyDatafromDB($etat, $theme){
         include_once('../config/DB.inc.php');
         $db = null;

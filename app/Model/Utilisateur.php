@@ -87,8 +87,6 @@ class Utilisateur
      * (l'utilisateur mis à jour est celui préalablement connecté)
      *
      * @param string $password le mot de passe à mettre à jour.
-     * @param string $mail le mail à mettre à jour.
-     * @param string $tel le tel à mettre à jour.
      *
      * @return boolean selon que la mise à jour est ok ou pas.
      */
