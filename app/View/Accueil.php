@@ -1,13 +1,6 @@
 <?php
 session_start();
 require_once "../Controller/AfficherArticleAccueil.php";
-
-/*if (!isset($_POST['theme'])){
-    $request = getArticleAccueil('all');
-} else {
-    $request = getArticleAccueil($_POST['theme']);
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +24,7 @@ require_once "../Controller/AfficherArticleAccueil.php";
 
 </header>
 
-<form method="post" action="../Controller/AfficherArticleAccueil.php">
+<form method="post" action="Accueil.php">
     <select name="theme" size="1" >
         <option value="all">Tout les thèmes
         <option value="sport">Sport

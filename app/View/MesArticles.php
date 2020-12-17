@@ -1,14 +1,6 @@
 <?php
 session_start();
-require_once "../Model/AfficheArticle.php";
-
-if (!isset($_POST['etat']) && !isset($_POST['theme'])) {
-    $request = getMyDatafromDB('all', 'all');
-} else {
-    $request = getMyDatafromDB($_POST['etat'], $_POST['theme']);
-}
-
-
+require_once "../Controller/AfficherMesArticles.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +25,7 @@ if (!isset($_POST['etat']) && !isset($_POST['theme'])) {
 
 </header>
 
-<form method="post">
+<form method="post" action="MesArticles.php">
     <select name="etat" size="1">
         <option value="all">Tout les articles
         <option value="brouillon">Brouillon

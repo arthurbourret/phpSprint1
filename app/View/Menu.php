@@ -28,7 +28,7 @@ function showMenu()
 function userConnected($log)
 {
     return "<a href='NewArticle.php'>Nouvel article</a>
-                  <a href='MesArticles.php'>Mes article</a>
+                  <a href='MesArticles.php'>Mes articles</a>
                   
                   <div class='connect'
                     <p>Utilisateur : $log</p>
