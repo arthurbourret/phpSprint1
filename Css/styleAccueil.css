@@ -75,7 +75,9 @@ a{
 }
 
 .connect {
-    margin-left: 400px;
     border-color: black;
     border-radius: 5px;
+}
+
+.deco_submit {
 }

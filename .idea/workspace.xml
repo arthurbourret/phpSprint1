@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3606b9c-2924-4540-abeb-8ce989de4bb4" name="Default Changelist" comment="modifs (jsp gros flemme)">
+    <list default="true" id="b3606b9c-2924-4540-abeb-8ce989de4bb4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Css/styleAccueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/styleAccueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/View/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Menu.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607604051170</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="modifs (jsp gros flemme)">
+      <created>1608244398422</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608244398422</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,10 +258,10 @@
     <MESSAGE value="commit" />
     <MESSAGE value="plein de truc expliqué sur discord" />
     <MESSAGE value="supprimer un article et amélioration lien vers article" />
-    <MESSAGE value="modifs (jsp gros flemme)" />
     <MESSAGE value="add menu.php" />
     <MESSAGE value="mvc" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvc" />
+    <MESSAGE value="modifs (jsp gros flemme)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifs (jsp gros flemme)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="391" y="91" width="1021" height="682" key="#Deployment" timestamp="1607334399359">
@@ -278,11 +284,11 @@
       <screen x="74" y="0" width="1462" height="864" />
     </state>
     <state x="536" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/74.0.1462.864@74.0.1462.864" timestamp="1605213461853" />
-    <state x="424" y="2" key="CommitChangelistDialog2" timestamp="1607604050072">
+    <state x="424" y="2" key="CommitChangelistDialog2" timestamp="1608244397710">
       <screen x="66" y="0" width="1470" height="864" />
     </state>
     <state x="421" y="2" key="CommitChangelistDialog2/62.0.1474.864@62.0.1474.864" timestamp="1605568660881" />
-    <state x="424" y="2" key="CommitChangelistDialog2/66.0.1470.864@66.0.1470.864" timestamp="1607604050072" />
+    <state x="424" y="2" key="CommitChangelistDialog2/66.0.1470.864@66.0.1470.864" timestamp="1608244397710" />
     <state x="430" y="2" key="CommitChangelistDialog2/74.0.1462.864@74.0.1462.864" timestamp="1605220801940" />
     <state x="167" y="93" width="1276" height="678" key="DiffContextDialog" timestamp="1605205235729">
       <screen x="74" y="0" width="1462" height="864" />
@@ -316,12 +322,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1605481452404" />
-    <state x="391" y="165" key="Vcs.Push.Dialog.v2" timestamp="1607604053403">
+    <state x="391" y="165" key="Vcs.Push.Dialog.v2" timestamp="1608244400451">
       <screen x="66" y="0" width="1470" height="864" />
     </state>
     <state x="340" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605546874267" />
     <state x="388" y="165" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1605568663667" />
-    <state x="391" y="165" key="Vcs.Push.Dialog.v2/66.0.1470.864@66.0.1470.864" timestamp="1607604053403" />
+    <state x="391" y="165" key="Vcs.Push.Dialog.v2/66.0.1470.864@66.0.1470.864" timestamp="1608244400451" />
     <state x="398" y="165" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1605220803860" />
     <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607890471776">
       <screen x="0" y="0" width="1536" height="824" />

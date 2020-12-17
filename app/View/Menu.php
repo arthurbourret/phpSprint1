@@ -33,7 +33,7 @@ function userConnected($log)
                   <a class='connect'
                     <p>Utilisateur : $log</p>
                     <form action='../Controller/Deconnexion.php' method=''>
-                        <input type='submit' value='Déconnexion'>
+                        <input class='deco_submit' type='submit' value='Déconnexion'>
                     </form>
                   </a>";
 }
