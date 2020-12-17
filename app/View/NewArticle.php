@@ -19,7 +19,7 @@
 
 </header>
 
-<form action="../app/Model/NewArticle.php" method="post">
+<form action="../Model/NewArticle.php" method="post">
 
     <div class="container">
         <div class="item meta">

@@ -4,7 +4,7 @@ session_start();
 
 function getArticleAccueil($theme)
 {
-    include_once('DB.inc.php');
+    include_once('../config/DB.inc.php');
     $db = null;
     try {
         $db = new PDO(
@@ -29,7 +29,7 @@ function getArticleAccueil($theme)
 
 function getMyDatafromDB($etat, $theme)
 {
-    include_once('DB.inc.php');
+    include_once('../config/DB.inc.php');
     $db = null;
     try {
         $db = new PDO(
