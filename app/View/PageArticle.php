@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Css/styleAccueil.css">
-    <link rel="stylesheet" href="../Css/stylesheet.css">
+    <link rel="stylesheet" href="../../Css/styleAccueil.css">
+    <link rel="stylesheet" href="../../Css/stylesheet.css">
     <title>NewArticle</title>
 </head>
 <body>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../Php/AfficheArticle.php";
+require_once "../Model/AfficheArticle.php";
 
 if (!isset($_POST['theme'])){
     $request = getArticleAccueil('all');
@@ -15,8 +15,8 @@ if (!isset($_POST['theme'])){
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-    <link rel="stylesheet" href="../Css/styleAccueil.css">
-    <link rel="stylesheet" href="../Css/stylesheet.css">
+    <link rel="stylesheet" href="../../Css/styleAccueil.css">
+    <link rel="stylesheet" href="../../Css/stylesheet.css">
 </head>
 
 <body>

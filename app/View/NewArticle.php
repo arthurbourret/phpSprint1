@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Article</title>
-    <link rel="stylesheet" href="../Css/stylesheet.css">
-    <link rel="stylesheet" href="../Css/styleAccueil.css">
+    <link rel="stylesheet" href="../../Css/stylesheet.css">
+    <link rel="stylesheet" href="../../Css/styleAccueil.css">
 </head>
 <body>
 

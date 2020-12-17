@@ -1,5 +1,5 @@
 <?php
-include_once("Utilisateur.php");
+include_once("../Model/Utilisateur.php");
 $user = new Utilisateur();
 
 $log = $_POST["login"];
@@ -10,12 +10,12 @@ if ($pass == $verif) {
     if ($user->createUser($log, $pass)){
         session_start ();
         $_SESSION['login'] = $log;
-        header('Location: ../Html/Accueil.php');
+        header('Location: ../View/Accueil.php');
     } else {
-        header('Location: ../Html/CreationCompte.php');
+        header('Location: ../View/CreationCompte.php');
         echo "erreur";
     }
 } else {
-    header('Location: ../Html/CreationCompte.php');
+    header('Location: ../View/CreationCompte.php');
     echo "les mots de passes ne sont pas identiques";
 }

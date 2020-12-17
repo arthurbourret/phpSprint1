@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Création compte</title>
-    <link rel="stylesheet" href="../Css/styleAccueil.css">
-    <link rel="stylesheet" href="../Css/styleConnexion.css">
+    <link rel="stylesheet" href="../../Css/styleAccueil.css">
+    <link rel="stylesheet" href="../../Css/styleConnexion.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
 
 </header>
 
-<form method="post" action="../app/Model/CreaCompte.php">
+<form method="post" action="../Controller/CreaCompte.php">
 
     <div class="connexion">
         <p class="titreCo">CREATION DE COMPTE</p>

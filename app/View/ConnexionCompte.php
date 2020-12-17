@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../Css/styleAccueil.css">
-    <link rel="stylesheet" href="../Css/styleConnexion.css">
+    <link rel="stylesheet" href="../../Css/styleAccueil.css">
+    <link rel="stylesheet" href="../../Css/styleConnexion.css">
 </head>
 <body>
 <header>
@@ -18,7 +18,7 @@
 
 </header>
 
-<form method="post" action="../app/Model/ConnexCompte.php">
+<form method="post" action="../Controller/ConnexCompte.php">
 
     <div class="connexion">
         <p class="titreCo">CONNEXION</p>

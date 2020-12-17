@@ -1,5 +1,5 @@
 <?php
-include_once("Utilisateur.php");
+include_once("../Model/Utilisateur.php");
 $use = new Utilisateur();
 
 $log = $_POST["login"];
@@ -9,7 +9,7 @@ if ($use->getAuth($log, $pass)) {
     session_start ();
     $_SESSION['login'] = $log;
     $_SESSION['pwd'] = $pass;
-    header('Location: ../Html/Accueil.php');
+    header('Location: ../View/Accueil.php');
 } else {
-    header('Location: ../Html/ConnexionCompte.php');
+    header('Location: ../View/ConnexionCompte.php');
 }
