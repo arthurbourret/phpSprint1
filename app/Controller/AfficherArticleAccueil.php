@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "../Model/AfficheArticle.php";
 
 if (!isset($_POST['theme'])){

@@ -25,7 +25,7 @@
 
     $ref = $_GET['id_ref'];
 
-    require_once "../Php/Article.php";
+    require_once "../Model/Article.php";
     $article = new Article();
     $article->setRef($ref);
     $article->setDataBase();
@@ -50,7 +50,7 @@
 
     if (isset($_POST['delete'])) {
         $article->deleteArticle($ref);
-        header('Location: ../Html/Accueil.php');
+        header('Location: ../View/Accueil.php');
     }
 
     if (isset($_POST['publish'])) {
