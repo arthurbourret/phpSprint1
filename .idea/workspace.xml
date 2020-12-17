@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3606b9c-2924-4540-abeb-8ce989de4bb4" name="Default Changelist" comment="modifs (jsp gros flemme)">
-      <change afterPath="$PROJECT_DIR$/app/Controller/AfficherMesArticles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controller/AfficherArticleAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/AfficherArticleAccueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/AfficheArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AfficheArticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/styleAccueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/styleAccueil.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Accueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/View/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/MesArticles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/MesArticles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,10 +301,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="666" y="227" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605272671927" />
-    <state x="596" y="340" key="NewPhpFileDialog" timestamp="1608243365182">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="636" y="357" key="NewPhpFileDialog" timestamp="1607606241461">
+      <screen x="66" y="0" width="1470" height="864" />
     </state>
-    <state x="596" y="340" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1608243365182" />
+    <state x="596" y="340" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605450391336" />
     <state x="634" y="357" key="NewPhpFileDialog/62.0.1474.864@62.0.1474.864" timestamp="1605566943406" />
     <state x="636" y="357" key="NewPhpFileDialog/66.0.1470.864@66.0.1470.864" timestamp="1607606241461" />
     <state x="641" y="356" key="NewPhpFileDialog/74.0.1462.864@74.0.1462.864" timestamp="1605213292293" />
@@ -320,17 +316,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1605481452404" />
-    <state x="340" y="157" key="Vcs.Push.Dialog.v2" timestamp="1608242340319">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="391" y="165" key="Vcs.Push.Dialog.v2" timestamp="1607604053403">
+      <screen x="66" y="0" width="1470" height="864" />
     </state>
-    <state x="340" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608242340319" />
+    <state x="340" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605546874267" />
     <state x="388" y="165" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1605568663667" />
     <state x="391" y="165" key="Vcs.Push.Dialog.v2/66.0.1470.864@66.0.1470.864" timestamp="1607604053403" />
     <state x="398" y="165" key="Vcs.Push.Dialog.v2/74.0.1462.864@74.0.1462.864" timestamp="1605220803860" />
-    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608242360443">
+    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607890471776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608242360443" />
+    <state x="577" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607890471776" />
     <state x="618" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/66.0.1470.864@66.0.1470.864" timestamp="1607527372756" />
     <state x="623" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/74.0.1462.864@74.0.1462.864" timestamp="1605213361523" />
     <state x="686" y="163" key="ftp.server.browser" timestamp="1607331118743">
