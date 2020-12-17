@@ -13,7 +13,7 @@ class Article
 
     function setDataBase()
     {
-        include_once('DB.inc.php');
+        include_once('..config/DB.inc.php');
 
         $this->db = null;
 
